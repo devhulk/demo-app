@@ -22,6 +22,7 @@ func main() {
 
 	mux := http.NewServeMux()
 	mux.HandleFunc("/", handlers.HelloHandler)
+	mux.HandleFunc("/rand", handlers.RandomNumberHandler)
 
 	httpServer := manners.NewServer()
 	httpServer.Addr = httpAddr
